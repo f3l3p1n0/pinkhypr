@@ -244,7 +244,6 @@ function finalizacion() {
 
 function call() {
     ruta=$(pwd)
-    present
     #update
     #packagemanager
     #setup "$ruta"
@@ -255,6 +254,7 @@ function call() {
 # SE COMPRUEBA SI EL INSTALADOR SE EJECUTA COMO ROOT
 
 if [ $(whoami) != 'root' ]; then
+    present
     # confirmación de proceder a instalar
     echo -en '\n'
     read -rep 'Atención!! En este momento se va a iniciar la instalación. ¿Desea continuar? (y,n) ' CONTINST
