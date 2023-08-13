@@ -2,17 +2,6 @@
 
 # Pinkhypr By f3l3p1n0 --> https://www.youtube.com/@f3l3p1n0
 
-# DEPENDENCIAS
-
-depen=(
-    qt5-wayland 
-    qt6-wayland
-    polkit 
-    polkit-gnome 
-    pipewire 
-    jq
-)
-
 # PAQUETES YAY
 
 install_packages_yay=(
@@ -21,7 +10,6 @@ install_packages_yay=(
     waybar 
     swaylock-effects 
     wl-clip-persist  
-    xdg-desktop-portal-hyprland 
     swappy 
     grim 
     slurp 
@@ -43,6 +31,7 @@ install_packages_yay=(
     megatools 
     wget 
     unzip
+    jq
     rustup
 )
 
@@ -139,12 +128,6 @@ function packagemanager() {
 
 function setup() {
     echo -e "\n"
-    echo -en "\e[33m[x] Instalando dependencias necesarias...\e[0m\n"
-    for SOFTWR in ${depen[@]}; do
-        install_software $SOFTWR 
-    done
-
-    echo -en "\n"
     echo -en "\e[33m[x] Instalando paquetes Yay...\e[0m\n"
     for SOFTWR in ${install_packages_yay[@]}; do
         if [ "$SOFTWR" == 'rustup' ]; then
@@ -207,14 +190,14 @@ function copia() {
     cd zsh-sudo
     wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh > /dev/null 2>&1
 
-    #mkdir "$1/dotfiles/fonts"
-    #cd $1/dotfiles/fonts
-    #megadl --print-names https://mega.nz/file/GxFVSLLY#etuNc6QRrEl6wgl_ZatvomojDhkBTFPqlKS7ELk7KAM > /dev/null 2>&1
+    mkdir "$1/dotfiles/fonts"
+    cd $1/dotfiles/fonts
+    megadl --print-names https://mega.nz/file/GxFVSLLY#etuNc6QRrEl6wgl_ZatvomojDhkBTFPqlKS7ELk7KAM > /dev/null 2>&1
 
-    #sudo cp -r $1/dotfiles/fonts/* "/usr/share/fonts/"
-    #cd /usr/share/fonts/
-    #sudo unzip fonts.zip > /dev/null 2>&1
-    #sudo rm -rf fonts.zip  > /dev/null 2>&1
+    sudo cp -r $1/dotfiles/fonts/* "/usr/share/fonts/"
+    cd /usr/share/fonts/
+    sudo unzip fonts.zip > /dev/null 2>&1
+    sudo rm -rf fonts.zip  > /dev/null 2>&1
 
     mkdir "$HOME/.config/scripts"
     cp -r $1/dotfiles/scripts/* "$HOME/.config/scripts"
@@ -225,6 +208,9 @@ function copia() {
 
     mkdir "$HOME/.config/swaylock"
     cp -r $1/dotfiles/swaylock/* "$HOME/.config/swaylock"
+
+    mkdir "$HOME/.config/eww"
+    cp -r $1/dotfiles/eww/* "$HOME/.config/eww"
 
     #sudo systemctl enable sddm > /dev/null 2>&1
     #sudo cp -r "$1/dotfiles/sddm/wallpaper.png" "/usr/share/sddm/themes/Sugar-Candy/Backgrounds/"
