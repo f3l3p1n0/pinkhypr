@@ -1,0 +1,75 @@
+.datemenu{
+    @include floating_widget;
+    
+    margin-left: 120em;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    .widget{
+        @include widget;
+        margin-left: $spacing;
+        padding: $spacing;
+        
+    }
+
+    .clock *{
+        margin-top: $spacing;
+        text-shadow: $text_shadow;
+        font-size: 7em;
+    }
+
+    .uptime{
+        margin-bottom: $spacing*2;
+        font-size: 1.1em;
+        text-shadow: $text_shadow;
+        color: transparentize($fg_color, 0.3)
+    }
+    
+    .calendar-bin{
+        padding: 1em 2.5em .4em 2em;
+        margin-bottom: 1em;
+        margin-right: .5em;
+        @include calendar;
+    }
+
+    .system{
+        > * {
+            @include widget;
+            margin: $spacing;
+            padding: 5px;
+            min-width:  3.4em;
+            min-height: 3.4em;
+        }
+        circular-progress{
+            background-color: $bg_color;
+            color: $accent;
+            &.battery{
+                &.low{ color: $red }
+            }
+            .icon{ 
+                font-size: 1.5em; 
+                margin-right: 4.5px;
+            }
+        }
+    }
+
+    .media{
+        @include media($style: 'widget')
+    }
+
+    .events.widget{
+        padding: 0;
+        .events{
+            @include events;
+        }
+    }
+    
+    .weather{
+        @include weather;
+    }
+
+    .wallpaper{
+        min-height: 13em;
+        background-image: url($assets+'wallpaper.png');
+        background-size: cover;
+    }
+}
