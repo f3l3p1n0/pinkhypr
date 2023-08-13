@@ -260,7 +260,7 @@ if [ $(whoami) != 'root' ]; then
     read -rep 'Atención!! En este momento se va a iniciar la instalación. ¿Desea continuar? (y,n) ' CONTINST
     if [[ $CONTINST == "Y" || $CONTINST == "y" ]]; then
         echo -en "\n"
-        echo -e "\e[33m[x] Iniciando Setup...\e[0m\n"
+        echo -en "\e[33m[x] Iniciando Setup...\e[0m\n"
         sudo touch /tmp/hyprv.tmp
         call
     else
