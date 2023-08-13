@@ -164,6 +164,7 @@ function setup() {
     cargo build --release --no-default-features --features=wayland &>> ../$INSTLOG &
     show_progress $!
     cd target/release
+    echo -en "\n"
     sudo ln -s $HOME/eww/target/release/eww /usr/local/bin
 }
 
