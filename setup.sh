@@ -244,9 +244,9 @@ function finalizacion() {
 
 function call() {
     ruta=$(pwd)
-    #update
-    #packagemanager
-    #setup "$ruta"
+    update
+    packagemanager
+    setup "$ruta"
     copia "$ruta"
     finalizacion
 }
