@@ -1,0 +1,42 @@
+(defwidget notifications_center [valign halign] (box
+    :halign halign :valign valign
+    :class "notification-center"
+    :orientation "v"
+    :space-evenly false
+    (box
+        :space-evenly false
+        :class "title"
+        (label :text "Notificaciones")
+        (box :hexpand true)
+        (button
+            :onclick "${EWW_CONFIG_DIR}/scripts/notifications clear"
+            (label :text "Clear ")))
+    (scroll
+        :class "notifications-list"
+        :hscroll false :vscroll true
+        :vexpand true
+        (box
+            :orientation "v"
+            :space-evenly false
+            (label :text {notifications} :visible false)
+            (box
+                :visible {arraylength(notifications.notifications) == 0}
+                :space-evenly false
+                :orientation "v"
+                :valign "center"
+                :halign "center"
+                :vexpand true
+                :class "placeholder"
+                (label
+                    :class "icon"
+                    :text "󰂚")
+                (label
+                    :text "Bandeja vacía"))
+            (for n in {notifications.notifications}
+                (notification 
+                    :onclick "close"
+                    :notification n)
+            )
+        )
+    )
+))
