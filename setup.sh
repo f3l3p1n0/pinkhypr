@@ -164,7 +164,7 @@ function setup() {
     cargo build --release --no-default-features --features=wayland &>> ../$INSTLOG &
     show_progress $!
     cd target/release
-    sudo ln -s $1/eww/target/release/eww /usr/local/bin
+    sudo ln -s $HOME/eww/target/release/eww /usr/local/bin
 }
 
 # SE COPIAN LOS DOTFILES
