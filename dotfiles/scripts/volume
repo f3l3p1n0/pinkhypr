@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+VOLUME=$(pamixer --get-volume)
+
+function icon {
+    if [[   $VOLUME -ge 66 ]]; then echo '󰕾'
+    elif [[ $VOLUME -ge 33 ]]; then echo '󰖀'
+    elif [[ $VOLUME -ge 1  ]]; then echo '󰕿'
+    else echo '󰝟'
+    fi
+}
+
+function level {
+    echo $(pamixer --get-volume)
+}
+
+function update {
+    ~/.config/eww/scripts/osd $(icon) $(level)
+}
+
+down() {
+  pamixer -d 5
+  update
+}
+
+up() {
+  pamixer -i 5
+  update
+}
+
+playpause() {
+  playerctl play-pause
+}
+
+mute() {
+  muted="$(pamixer --get-mute)"
+  if $muted; then
+    pamixer -u
+  else 
+    pamixer -m
+  fi
+}
+
+case "$1" in
+  up) up;;
+  down) down;;
+  mute) mute;;
+  playpause) playpause;;
+esac
