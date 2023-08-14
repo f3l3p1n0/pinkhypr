@@ -223,6 +223,7 @@ function copia() {
     chmod +x -R * > /dev/null 2>&1
 
     echo -en "\e[32mOK\e[0m"
+    echo -en "\n"
 }
 
 # FINALIZACION
