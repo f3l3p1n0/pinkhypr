@@ -36,6 +36,8 @@ install_packages_yay=(
     gtk3
     gjs
     gnome-bluetooth-3.0
+    w3m
+    imagemagick
     rustup
 )
 
