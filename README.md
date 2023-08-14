@@ -14,7 +14,8 @@
    </p>
    <hr>
    <h3>‼️ Importante tener en cuenta!!</h3>
-    <p>No es compatible con Nvidia ni con Máquinas virtuales.</p>
+    <p>No es compatible con Nvidia ni con Máquinas virtuales.</p><br>
+    <p>Es muy importante entender que dependiendo del hardware donde realices la instalación, el proceso será más rápido o lento.</p>
    <hr>
    <h3>🍧 Información</h3>
     <ul>
