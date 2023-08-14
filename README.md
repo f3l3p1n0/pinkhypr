@@ -38,13 +38,14 @@
   <p>Debes ir a la configuración de hyprpaper: <strong>nano .config/hypr/hyprpaper.conf</strong></p>
    <p>Posteriormente, cambia el nombre del monitor que hay establecido por el nombre de tu monitor</p>
    <p>Para saber el nombre de tu monitor debes escribir en la terminal: <strong>hyprctl monitors</strong></p>
-   <h5><ins>◻️ El powermenu se visualiza distorsionado o no funciona</ins></h5>
-  <p>El powermenu en mi caso, está configurado para que se pueda visualizar correctamente en la resolución 1920x1080. Si en tu caso no lo visualizas correctamente, deberás dirigirte a la siguiente ruta: <strong>cd ~/.config/rofi/powermenu/</strong></p>
-   <p>Posteriormente, deberás abrir el archivo <strong>config.rasi</strong></p>
-   <p>En este archivo debes modificar la línea: <strong>mainbox-margin</strong> del apartado Global Properties. Ajusta los parámetros a tu gusto, puedes probar con <strong>15px 40px</strong>.</p>
    <h5><ins>◻️ Waybar no carga al iniciar sesión</ins></h5>
    <p>Debes abrir la configuración de waybar: <strong>nano .config/waybar/config.jsonc</strong></p>
    <p>En el archivo debes modificar el apartado <strong>output</strong> para cambiar el nombre del monitor.</p>
+   <h5><ins>◻️ El powermenu no funciona</ins></h5>
+   <p>Debes editar el archivo 'nano ~/.config/eww/yuck/windows/powermenu.yuck'</p>
+   <p>En este archivo encuentra la linea donde haya escrito lo siguiente: ':onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu powermenu && ${action}"'</p>
+   <p>En esta linea debes cambiar la parte de '&& ${action}' la cual debe quedar de la siguiente forma '& ${action}"'</p>
+   <p>Básicamente lo que habrás realizado es eliminar uno de los símbolos '&'</p><br>
    <hr>
    <h3>👤 Autor</h3>
    <p><a href="https://github.com/f3l3p1n0">f3l3p1n0</a></p>
