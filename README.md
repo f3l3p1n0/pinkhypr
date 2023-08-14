@@ -45,7 +45,7 @@
    <p>Debes editar el archivo 'nano ~/.config/eww/yuck/windows/powermenu.yuck'</p>
    <p>En este archivo encuentra la linea donde haya escrito lo siguiente: ':onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu powermenu && ${action}"'</p>
    <p>En esta linea debes cambiar la parte de '&& ${action}' la cual debe quedar de la siguiente forma '& ${action}"'</p>
-   <p>Básicamente lo que habrás realizado es eliminar uno de los símbolos '&'</p><br>
+   <p>Básicamente lo que habrás realizado es eliminar uno de los símbolos '&'</p>
    <hr>
    <h3>👤 Autor</h3>
    <p><a href="https://github.com/f3l3p1n0">f3l3p1n0</a></p>
