@@ -141,7 +141,7 @@
 },
 "custom/launcher": {
   "format": "<span font='18' rise='-1000'>󰣇 </span>",
-  "on-click": "bash .config/eww/scripts/launcher toggle_menu powermenu"
+  "on-click": "bash ~/.config/eww/scripts/launcher toggle_menu powermenu"
 },
 
 "custom/wf-recorder": {
