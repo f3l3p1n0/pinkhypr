@@ -30,7 +30,7 @@
    <hr>
    <h3>🔧 Instalación</h3>
    <p>Aplica permisos de ejecución a 'setup.sh' e inicialo. Posteriormente debes esperar hasta que finalice.</p>
-   <!--<p>Te dejo por aquí un vídeo por si quieres realizar la instalación de una forma más guiada: ''</p>-->
+   <p>Te dejo por aquí un vídeo por si quieres realizar la instalación de una forma más guiada: https://www.youtube.com/watch?v=f4rUgk1rmyc&ab_channel=f3l3p1n0</p>
    <hr>
    <h3>🔴 Posibles problemas y soluciones</h3>
   <h4>En esta sección se abarcarán los posibles problemas y soluciones que vayan surgiendo:</h4>
