@@ -158,6 +158,7 @@ function setup() {
 # SE COPIAN LOS DOTFILES
 
 function copia() {
+    echo -en "\n"
     echo -en "\e[33m[x] Copiando configuración...\e[0m\n"
     echo -en "dotfiles."
 
