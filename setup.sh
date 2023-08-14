@@ -152,12 +152,15 @@ function setup() {
     show_progress $!
     cd target/release
     echo -en "\n"
-    sudo ln -s $HOME/eww/target/release/eww /usr/local/bin
+    sudo ln -sf $HOME/eww/target/release/eww /usr/local/bin
 }
 
 # SE COPIAN LOS DOTFILES
 
 function copia() {
+    echo -en "\e[33m[x] Copiando configuración...\e[0m\n"
+    echo -en "dotfiles."
+
     mkdir "$HOME/.config" > /dev/null 2>&1
 
     rm -rf "$HOME/.config/neofetch" > /dev/null 2>&1
@@ -218,11 +221,7 @@ function copia() {
     cd "$HOME/.config/eww/scripts"
     chmod +x -R * > /dev/null 2>&1
 
-    #sudo systemctl enable sddm > /dev/null 2>&1
-    #sudo cp -r "$1/dotfiles/sddm/wallpaper.png" "/usr/share/sddm/themes/Sugar-Candy/Backgrounds/"
-    #sudo cp -r "$1/dotfiles/sddm/theme.conf" "/usr/share/sddm/themes/Sugar-Candy/"
-    #sudo cp -r "$1/dotfiles/sddm/sddm.conf" "/etc/"
-    #echo -e "\e[32mOK\e[0m"
+    echo -en "\e[32mOK\e[0m"
 }
 
 # FINALIZACION
