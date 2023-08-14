@@ -32,6 +32,10 @@ install_packages_yay=(
     wget 
     unzip
     jq
+    gtk-layer-shell
+    gtk3
+    gjs
+    gnome-bluetooth-3.0
     rustup
 )
 
@@ -160,16 +164,16 @@ function copia() {
     mkdir "$HOME/.config/neofetch"
     cp -r $1/dotfiles/neofetch/* "$HOME/.config/neofetch/"
 
-    mkdir "$HOME/.config/wezterm"
+    mkdir "$HOME/.config/wezterm" > /dev/null 2>&1
     cp -r $1/dotfiles/wezterm/* "$HOME/.config/wezterm/"
 
-    mkdir "$HOME/.config/hypr"
+    mkdir "$HOME/.config/hypr" > /dev/null 2>&1
     cp -r $1/dotfiles/hypr/* "$HOME/.config/hypr/"
 
-    mkdir "$HOME/Images"
+    mkdir "$HOME/Images" > /dev/null 2>&1
     cp -r $1/dotfiles/wallpaper.png "$HOME/Images/"
 
-    mkdir "$HOME/.config/waybar"
+    mkdir "$HOME/.config/waybar" > /dev/null 2>&1
     cp -r $1/dotfiles/waybar/* "$HOME/.config/waybar/"
     chmod +x "$HOME/.config/waybar/scripts/mediaplayer.py" "$HOME/.config/waybar/scripts/wlrecord.sh"
     chmod +x "$HOME/.config/waybar/scripts/playerctl/playerctl.sh"
@@ -199,18 +203,20 @@ function copia() {
     sudo unzip fonts.zip > /dev/null 2>&1
     sudo rm -rf fonts.zip  > /dev/null 2>&1
 
-    mkdir "$HOME/.config/scripts"
+    mkdir "$HOME/.config/scripts" > /dev/null 2>&1
     cp -r $1/dotfiles/scripts/* "$HOME/.config/scripts"
     chmod +x -R $HOME/.config/scripts/
 
-    mkdir "$HOME/.config/swappy"
+    mkdir "$HOME/.config/swappy" > /dev/null 2>&1
     cp -r $1/dotfiles/swappy/* "$HOME/.config/swappy"
 
-    mkdir "$HOME/.config/swaylock"
+    mkdir "$HOME/.config/swaylock" > /dev/null 2>&1
     cp -r $1/dotfiles/swaylock/* "$HOME/.config/swaylock"
 
-    mkdir "$HOME/.config/eww"
+    mkdir "$HOME/.config/eww" > /dev/null 2>&1
     cp -r $1/dotfiles/eww/* "$HOME/.config/eww"
+    cd "$HOME/.config/eww/scripts"
+    chmod +x -R * > /dev/null 2>&1
 
     #sudo systemctl enable sddm > /dev/null 2>&1
     #sudo cp -r "$1/dotfiles/sddm/wallpaper.png" "/usr/share/sddm/themes/Sugar-Candy/Backgrounds/"
