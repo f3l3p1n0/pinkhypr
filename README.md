@@ -49,12 +49,6 @@
    <hr>
    <h3>👤 Autor</h3>
    <p><a href="https://github.com/f3l3p1n0">f3l3p1n0</a></p>
-   <hr>
-   <h3>📱 Redes sociales</h3>
-   <a href="https://f3l3p1n0.github.io">Blog personal</a><br>
-   <a href="https://www.youtube.com/@f3l3p1n0">Youtube</a><br>
-   <a href="https://www.instagram.com/f3l3p1n0/?igshid=Mzc1MmZhNjY%3D">Instagram</a><br>
-   <a href="https://www.linkedin.com/in/marc-mañé-lobato/">Linkedin</a><br>
   </body>
   </html>
 
